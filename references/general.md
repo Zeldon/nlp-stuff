@@ -22,7 +22,20 @@
 </details>
 
 ---
+### Awesome Gits
+- [hugging face](https://huggingface.co/)
+- 
+
+---
 ### Theory
+
+#### Word2Vec
+<details open>
+
+- [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
+- []()
+
+</details>
 
 #### Transformers
 <details open>
@@ -33,6 +46,10 @@
 
 </details>
 
+#### Knowledge Graphs
+
+
+
 ---
 ### Applications
 
@@ -42,6 +59,8 @@
 - [Hands-on Transformers (Kaggle Google QUEST Q&A Labeling)](https://towardsdatascience.com/hands-on-transformers-kaggle-google-quest-q-a-labeling-affd3dad7bcb)
 - [Which flavor of BERT should you use for your QA task?](https://towardsdatascience.com/which-flavor-of-bert-should-you-use-for-your-qa-task-6d6a0897fb24) 
 - **[Building a Semantic Search Engine for Large-Scale Fact-Checking and Question Answering](https://towardsdatascience.com/building-a-semantic-search-engine-for-large-scale-fact-checking-and-question-answering-9aa356632432)**
+- [Building a Personal assistant like Alexa through Ontology Based Knowledge Search](https://towardsdatascience.com/building-a-personal-assistant-like-alexa-open-domain-question-answering-7e9aa1e8ed90)  
+- 
 
 </details>
 
@@ -65,11 +84,11 @@
 ##### Recys
 <details open>
 
-- [The AIgent: Using Google’s BERT Language Model to Connect Writers & Representation](https://blog.insightdatascience.com/the-aigent-using-googles-bert-language-model-to-connect-writers-representation-42ac6388da7c)
+- :thumbsup: **[The AIgent: Using Google’s BERT Language Model to Connect Writers & Representation](https://blog.insightdatascience.com/the-aigent-using-googles-bert-language-model-to-connect-writers-representation-42ac6388da7c)**
 - [Content-Based Recommendation System using Word Embeddings](https://medium.com/towards-artificial-intelligence/content-based-recommendation-system-using-word-embeddings-c1c15de1ef95)
 - [Natural Language Recommendations: A novel research paper search engine developed entirely with embedding and transformer models.](https://github.com/Santosh-Gupta/NaturalLanguageRecommendations)
 - [NLP: Classification & Recommendation Project](https://towardsdatascience.com/nlp-classification-recommendation-project-cae5623ccaae)
-<details>
+</details>
 
 ##### Text Generation
 <details open>
@@ -86,7 +105,28 @@
 
 - [Information Bottleneck for NLP (parsing & summarization)](https://medium.com/jasonwu0731/information-bottleneck-for-nlp-parsing-summarization-961418fbb697)
 - [Generate Summaries using Google’s Pegasus library](https://towardsdatascience.com/generate-summaries-using-googles-pegasus-library-772633a161c2)
+- [Text Summarisation with Gensim (TextRank Algorithm)](https://medium.com/@shivangisareen/text-summarisation-with-gensim-textrank-46bbb3401289)  
+- [Fine-tuning BART for Abstractive Text Summarisation with fastai2](https://medium.com/curation-corporation/fine-tuning-bart-for-abstractive-text-summarisation-with-fastai2-d7a2ad676a13)  
+- [Fine-tuning Bert for Abstractive Summarisation with the Curation Dataset](https://medium.com/curation-corporation/fine-tuning-bert-for-abstractive-summarisation-with-the-curation-dataset-79ea4b40a923)
+- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8)  
+- [Build a simple text summarisation tool using NLTK](https://medium.com/@limavallantin/build-a-simple-text-summarisation-tool-using-nltk-ff0984fedb4f)
+- [Automatic Text Summarisation - Condensing customer complaints with TextRank](https://towardsdatascience.com/automatic-text-summarisation-ccc98d2b323f)
+- [NLP: Text Summarisation in 5 Easy Steps!](https://medium.com/@96ashraf96/nlp-text-summarisation-in-5-easy-steps-8b4ae00400e6)
+- [A tour of awesome features of spaCy (part 1/2)](https://medium.com/eliiza-ai/a-tour-of-awesome-features-of-spacy-part-1-2-58b32425954f)
+- [Practical NLP: Summarising Short and Long Speeches With Hugging Face’s Pipeline - **SG**](https://towardsdatascience.com/practical-nlp-summarising-short-and-long-speeches-with-hugging-faces-pipeline-bc7df76bd366)
+- [Unsupervised Text Summarization using Sentence Embeddings](https://medium.com/jatana/unsupervised-text-summarization-using-sentence-embeddings-adb15ce83db1)
+- [Understand Text Summarization and create your own summarizer in python](https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70)
+- [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://medium.com/analytics-vidhya/an-introduction-to-text-summarization-using-the-textrank-algorithm-with-python-implementation-2370c39d0c60)
+- [A Quick Introduction to Text Summarization in Machine Learning](https://towardsdatascience.com/a-quick-introduction-to-text-summarization-in-machine-learning-3d27ccf18a9f)
+- [Text Summarization using Deep Learning](https://towardsdatascience.com/text-summarization-using-deep-learning-6e379ed2e89c)
+- [Text Summarization on the Books of Harry Potter](https://towardsdatascience.com/text-summarization-on-the-books-of-harry-potter-5e9f5bf8ca6c)
+- [Text Summarization with Amazon Reviews](https://towardsdatascience.com/text-summarization-with-amazon-reviews-41801c2210b)
+- [Generating meaningful Phrases from unstructured news data](https://medium.com/analytics-vidhya/generating-meaningful-phrases-from-unstructured-news-data-d4e217a7da43)
+- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8)
+- [Text Summarization from scratch using Encoder-Decoder network with Attention in Keras](https://towardsdatascience.com/text-summarization-from-scratch-using-encoder-decoder-network-with-attention-in-keras-5fa80d12710e)
+- [An Approach To Build An Online News Distribution System](https://medium.com/the-innovation/an-approach-to-build-an-online-news-distribution-system-acda2aa8059b)
 - 
+
 
 </details>
 
