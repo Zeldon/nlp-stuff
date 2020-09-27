@@ -104,7 +104,6 @@
 <details open>
 
 - [Information Bottleneck for NLP (parsing & summarization)](https://medium.com/jasonwu0731/information-bottleneck-for-nlp-parsing-summarization-961418fbb697)
-- [Generate Summaries using Google’s Pegasus library](https://towardsdatascience.com/generate-summaries-using-googles-pegasus-library-772633a161c2)
 - [Text Summarisation with Gensim (TextRank Algorithm)](https://medium.com/@shivangisareen/text-summarisation-with-gensim-textrank-46bbb3401289)  
 - [Fine-tuning BART for Abstractive Text Summarisation with fastai2](https://medium.com/curation-corporation/fine-tuning-bart-for-abstractive-text-summarisation-with-fastai2-d7a2ad676a13)  
 - [Fine-tuning Bert for Abstractive Summarisation with the Curation Dataset](https://medium.com/curation-corporation/fine-tuning-bert-for-abstractive-summarisation-with-the-curation-dataset-79ea4b40a923)
@@ -116,15 +115,48 @@
 - [Practical NLP: Summarising Short and Long Speeches With Hugging Face’s Pipeline - **SG**](https://towardsdatascience.com/practical-nlp-summarising-short-and-long-speeches-with-hugging-faces-pipeline-bc7df76bd366)
 - [Unsupervised Text Summarization using Sentence Embeddings](https://medium.com/jatana/unsupervised-text-summarization-using-sentence-embeddings-adb15ce83db1)
 - [Understand Text Summarization and create your own summarizer in python](https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70)
-- [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://medium.com/analytics-vidhya/an-introduction-to-text-summarization-using-the-textrank-algorithm-with-python-implementation-2370c39d0c60)
-- [A Quick Introduction to Text Summarization in Machine Learning](https://towardsdatascience.com/a-quick-introduction-to-text-summarization-in-machine-learning-3d27ccf18a9f)
+- [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://medium.com/analytics-vidhya/an-introduction-to-text-summarization-using-the-textrank-algorithm-with-python-implementation-2370c39d0c60) - 
+  - [Let’s Think in Graphs: Introduction to Graph Theory and its Applications using Python](https://www.analyticsvidhya.com/blog/2018/09/introduction-graph-theory-applications-python/)
+  - dataset provided
+  - author has a few articles:
+    - [Introduction to Information Extraction using Python and spaCy](https://medium.com/analytics-vidhya/introduction-to-information-extraction-using-python-and-spacy-858f5d6416ca) - about how they do google search relevance/query results
+    - [Building a Recommendation System using Word2vec](https://medium.com/analytics-vidhya/building-a-recommendation-system-using-word2vec-a-unique-tutorial-with-case-study-in-python-f02357fd2486) - hands-on product word2vec gensim
+    - **[How do Transformers Work in NLP? A Guide to the Latest State-of-the-Art Models](https://medium.com/analytics-vidhya/how-do-transformers-work-in-nlp-a-guide-to-the-latest-state-of-the-art-models-52424082c132)** - good walkthrough
+    - [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text](https://medium.com/analytics-vidhya/a-step-by-step-nlp-guide-to-learn-elmo-for-extracting-features-from-text-de0d77e32a99) - good ELMO lore
+    - [Text Mining 101: A Stepwise Introduction to Topic Modeling using Latent Semantic Analysis (using Python)](https://medium.com/analytics-vidhya/text-mining-101-a-stepwise-introduction-to-topic-modeling-using-latent-semantic-analysis-using-add9c905efd9) - good LSA article
+    - [LDA and LDA2VEC](https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/)
+    - 
+- [A Quick Introduction to Text Summarization in Machine Learning](https://towardsdatascience.com/a-quick-introduction-to-text-summarization-in-machine-learning-3d27ccf18a9f) - simple intro brief. not much.
 - [Text Summarization using Deep Learning](https://towardsdatascience.com/text-summarization-using-deep-learning-6e379ed2e89c)
+  - [Pointer Generator Network](https://arxiv.org/abs/1704.04368)
+  - [Rouge score](https://en.wikipedia.org/wiki/ROUGE_(metric))
+  - [Priwadi's Attention Blog](https://towardsdatascience.com/nlp-building-a-question-answering-model-ed0529a68c54)
+
 - [Text Summarization on the Books of Harry Potter](https://towardsdatascience.com/text-summarization-on-the-books-of-harry-potter-5e9f5bf8ca6c)
+  - sumy package
+  - EdmundsonSummarizer
+  - LexRank
+  - Luhn Summarizer
+  - LSA Summarizer (Latent Semantic Analysis)
+  - TextRank Summarizer
+  - SumBasic Summarizer
+  - KL Summarizer (KL Divergence)
+  - Reduction Summarizer
+  - Gensim Summarizer (modification of the TextRank algorithm)
 - [Text Summarization with Amazon Reviews](https://towardsdatascience.com/text-summarization-with-amazon-reviews-41801c2210b)
-- [Generating meaningful Phrases from unstructured news data](https://medium.com/analytics-vidhya/generating-meaningful-phrases-from-unstructured-news-data-d4e217a7da43)
-- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8)
-- [Text Summarization from scratch using Encoder-Decoder network with Attention in Keras](https://towardsdatascience.com/text-summarization-from-scratch-using-encoder-decoder-network-with-attention-in-keras-5fa80d12710e)
-- [An Approach To Build An Online News Distribution System](https://medium.com/the-innovation/an-approach-to-build-an-online-news-distribution-system-acda2aa8059b)
+  - [ConceptNet Numberbatch](https://github.com/commonsense/conceptnet-numberbatch)
+  - mentioned some data pre processing steps for NLP
+  - building a seq2seq with Attention model using TF
+- [Generating meaningful Phrases from unstructured news data](https://medium.com/analytics-vidhya/generating-meaningful-phrases-from-unstructured-news-data-d4e217a7da43) - colocation theory for phrases
+- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8) - Curation Corporation (Tech Company focused on the problem of New Summarisation and curation!!!) - open sourced dataset - **ALSO WITH SCRIPT TO PARSE DATA!!**
+- [Text Summarization from scratch using Encoder-Decoder network with Attention in Keras](https://towardsdatascience.com/text-summarization-from-scratch-using-encoder-decoder-network-with-attention-in-keras-5fa80d12710e)  - another great one to guide news article site creation
+- [An Approach To Build An Online News Distribution System](https://medium.com/the-innovation/an-approach-to-build-an-online-news-distribution-system-acda2aa8059b)  - great for design considerations of news aggregator
+- [Understanding Automatic Text Summarization-1: Extractive Methods](https://towardsdatascience.com/understanding-automatic-text-summarization-1-extractive-methods-8eb512b21ecc) - okie for primer of basics
+
+**Tools**
+- [PEGASUS](https://github.com/google-research/pegasus)
+  - [Generate Summaries using Google’s Pegasus library](https://towardsdatascience.com/generate-summaries-using-googles-pegasus-library-772633a161c2)
+  - [PEGASUS: Google’s State of the Art Abstractive Summarization Model](https://towardsdatascience.com/pegasus-google-state-of-the-art-abstractive-summarization-model-627b1bbbc5ce)
 - 
 
 
