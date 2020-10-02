@@ -56,11 +56,13 @@
 ##### Question & Answers System
 <details open>
 
+- [How does the [current] best question answering model work?](https://towardsdatascience.com/how-the-current-best-question-answering-model-works-8bbacf375e2a)
+- [BERT NLP — How To Build a Question Answering Bot](https://towardsdatascience.com/bert-nlp-how-to-build-a-question-answering-bot-98b1d1594d7b)
 - [Hands-on Transformers (Kaggle Google QUEST Q&A Labeling)](https://towardsdatascience.com/hands-on-transformers-kaggle-google-quest-q-a-labeling-affd3dad7bcb)
-- [Which flavor of BERT should you use for your QA task?](https://towardsdatascience.com/which-flavor-of-bert-should-you-use-for-your-qa-task-6d6a0897fb24) 
+- [Which flavor of BERT should you use for your QA task?](https://towardsdatascience.com/which-flavor-of-bert-should-you-use-for-your-qa-task-6d6a0897fb24)  - pytorch, hugging face, various repos
 - **[Building a Semantic Search Engine for Large-Scale Fact-Checking and Question Answering](https://towardsdatascience.com/building-a-semantic-search-engine-for-large-scale-fact-checking-and-question-answering-9aa356632432)**
 - [Building a Personal assistant like Alexa through Ontology Based Knowledge Search](https://towardsdatascience.com/building-a-personal-assistant-like-alexa-open-domain-question-answering-7e9aa1e8ed90)  
-- 
+- [Question Answering with PyTorch Transformers: Part 1](https://medium.com/@patonw/question-answering-with-pytorch-transformers-part-1-8736196bf20e)
 
 </details>
 
@@ -103,17 +105,39 @@
 ##### Text Summarisation
 <details open>
 
-- [Information Bottleneck for NLP (parsing & summarization)](https://medium.com/jasonwu0731/information-bottleneck-for-nlp-parsing-summarization-961418fbb697)
-- [Text Summarisation with Gensim (TextRank Algorithm)](https://medium.com/@shivangisareen/text-summarisation-with-gensim-textrank-46bbb3401289)  
-- [Fine-tuning BART for Abstractive Text Summarisation with fastai2](https://medium.com/curation-corporation/fine-tuning-bart-for-abstractive-text-summarisation-with-fastai2-d7a2ad676a13)  
+- [Information Bottleneck for NLP (parsing & summarization)](https://medium.com/jasonwu0731/information-bottleneck-for-nlp-parsing-summarization-961418fbb697) - more mathematical and a look at information theory and bottleneck.
+  - Author's medium posts not bad.
+  - [Conversational AI Research Roadmap](https://medium.com/jasonwu0731/conversational-ai-research-roadmap-6920307cbbac) - **GREAT BLOG ON CONVERATIONAL AI Lore.**
+- [Text Summarisation with Gensim (TextRank Algorithm)](https://medium.com/@shivangisareen/text-summarisation-with-gensim-textrank-46bbb3401289)  - not very good. refer to textrank example below.
+- [Fine-tuning BART for Abstractive Text Summarisation with fastai2](https://medium.com/curation-corporation/fine-tuning-bart-for-abstractive-text-summarisation-with-fastai2-d7a2ad676a13)
+  - [BertExtAbs](https://render.githubusercontent.com/finetuning-bertsumextabs)
+  - 
 - [Fine-tuning Bert for Abstractive Summarisation with the Curation Dataset](https://medium.com/curation-corporation/fine-tuning-bert-for-abstractive-summarisation-with-the-curation-dataset-79ea4b40a923)
-- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8)  
+  - [Text Summarization with Pretrained Encoders](https://arxiv.org/pdf/1908.08345.pdf)
+  - [partial reimplementation of their code in the HuggingFace transformers repository](https://github.com/huggingface/transformers/tree/master/examples/summarization)
+  - [label smoothing cross entropy loss ](https://youtu.be/vnOpEwmtFJ8?t=1112)
+  - [seq2seq accuracy](https://youtu.be/IfsjMg4fLWQ?t=1633)
+  - 
+- [Teaching an AI to summarise news articles: A new dataset for abstractive summarisation](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8) - good
+  - Open Source their [datasets](https://medium.com/curation-corporation/teaching-an-ai-to-abstract-a-new-dataset-for-abstractive-auto-summarisation-5227f546caa8)
+  - [Git Repo for Training and Fine Tuning](https://github.com/CurationCorp/curation-corpus/tree/master/examples)
+  - 
 - [Build a simple text summarisation tool using NLTK](https://medium.com/@limavallantin/build-a-simple-text-summarisation-tool-using-nltk-ff0984fedb4f)
-- [Automatic Text Summarisation - Condensing customer complaints with TextRank](https://towardsdatascience.com/automatic-text-summarisation-ccc98d2b323f)
-- [NLP: Text Summarisation in 5 Easy Steps!](https://medium.com/@96ashraf96/nlp-text-summarisation-in-5-easy-steps-8b4ae00400e6)
-- [A tour of awesome features of spaCy (part 1/2)](https://medium.com/eliiza-ai/a-tour-of-awesome-features-of-spacy-part-1-2-58b32425954f)
+  - [author's blog vallant.in](https://vallant.in/)
+  - he just band together text via TF-IDF and scrape Indeed.
+- [Automatic Text Summarisation - Condensing customer complaints with TextRank](https://towardsdatascience.com/automatic-text-summarisation-ccc98d2b323f) - just a simple textrank example used on Customer Complaints dataset.
+- [NLP: Text Summarisation in 5 Easy Steps!](https://medium.com/@96ashraf96/nlp-text-summarisation-in-5-easy-steps-8b4ae00400e6) - not much
+- [A tour of awesome features of spaCy (part 1/2)](https://medium.com/eliiza-ai/a-tour-of-awesome-features-of-spacy-part-1-2-58b32425954f) - just simple spacy intros 
 - [Practical NLP: Summarising Short and Long Speeches With Hugging Face’s Pipeline - **SG**](https://towardsdatascience.com/practical-nlp-summarising-short-and-long-speeches-with-hugging-faces-pipeline-bc7df76bd366)
+  - [git repo](https://github.com/chuachinhon/practical_nlp)
+  - BART model
 - [Unsupervised Text Summarization using Sentence Embeddings](https://medium.com/jatana/unsupervised-text-summarization-using-sentence-embeddings-adb15ce83db1)
+  - ![text summary techniques](https://miro.medium.com/max/1400/1*HGv72R4Lm1Q_HoiWwiXk9A.png)
+  - Various steps for pre-proc of emails
+  - [Mailgun Talon GitHub repository](https://github.com/mailgun/talon)
+  - [Skip Gram Word2Vec](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+  - cluster and get candidate sentence
+  - Theano
 - [Understand Text Summarization and create your own summarizer in python](https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70)
 - [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://medium.com/analytics-vidhya/an-introduction-to-text-summarization-using-the-textrank-algorithm-with-python-implementation-2370c39d0c60) - 
   - [Let’s Think in Graphs: Introduction to Graph Theory and its Applications using Python](https://www.analyticsvidhya.com/blog/2018/09/introduction-graph-theory-applications-python/)
