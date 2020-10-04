@@ -54,7 +54,7 @@
 ### Applications
 
 ##### Question & Answers System
-<details open>
+<details>
 
 - [How does the [current] best question answering model work?](https://towardsdatascience.com/how-the-current-best-question-answering-model-works-8bbacf375e2a)
 - [BERT NLP — How To Build a Question Answering Bot](https://towardsdatascience.com/bert-nlp-how-to-build-a-question-answering-bot-98b1d1594d7b)
@@ -63,11 +63,12 @@
 - **[Building a Semantic Search Engine for Large-Scale Fact-Checking and Question Answering](https://towardsdatascience.com/building-a-semantic-search-engine-for-large-scale-fact-checking-and-question-answering-9aa356632432)**
 - [Building a Personal assistant like Alexa through Ontology Based Knowledge Search](https://towardsdatascience.com/building-a-personal-assistant-like-alexa-open-domain-question-answering-7e9aa1e8ed90)  
 - [Question Answering with PyTorch Transformers: Part 1](https://medium.com/@patonw/question-answering-with-pytorch-transformers-part-1-8736196bf20e)
-
+- [Build a Smart Question Answering System with Fine-Tuned BERT](https://medium.com/saarthi-ai/build-a-smart-question-answering-system-with-fine-tuned-bert-b586e4cfa5f5)
+- 
 </details>
 
 ##### Similarity and Search
-<details open>
+<details>
 
 - [An introduction to Deep Similarity Learning for sequences](https://towardsdatascience.com/introduction-to-deep-similarity-learning-for-sequences-89d9c26f8392)
 - [How BERT Determines Search Relevance](https://towardsdatascience.com/how-bert-determines-search-relevance-2a67a1575ac4)
@@ -84,12 +85,12 @@
 </details>
 
 ##### Recys
-<details open>
+<details>
 
 - :thumbsup: **[The AIgent: Using Google’s BERT Language Model to Connect Writers & Representation](https://blog.insightdatascience.com/the-aigent-using-googles-bert-language-model-to-connect-writers-representation-42ac6388da7c)**
 - [Content-Based Recommendation System using Word Embeddings](https://medium.com/towards-artificial-intelligence/content-based-recommendation-system-using-word-embeddings-c1c15de1ef95)
 - [Natural Language Recommendations: A novel research paper search engine developed entirely with embedding and transformer models.](https://github.com/Santosh-Gupta/NaturalLanguageRecommendations)
-- [NLP: Classification & Recommendation Project](https://towardsdatascience.com/nlp-classification-recommendation-project-cae5623ccaae)
+- [NLP: Classification & Recommendation Project](https://towardsdatascience.com/nlp-classification-recommendation-project-cae5623ccaae) - just tfidf matrix.
 </details>
 
 ##### Text Generation
@@ -188,7 +189,7 @@
 
 ---
 ##### Libraries and Usage
-<details open>
+<details>
 
 - [Which is the best NLP library?](https://towardsdatascience.com/which-is-the-best-nlp-d7965c71ec5f)
 - []()
@@ -197,7 +198,7 @@
 
 ---
 ##### Repos
-<details open>
+<details>
 
 - [Hugging Face Transformers](https://github.com/huggingface/transformers)
 - 
