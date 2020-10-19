@@ -54,7 +54,7 @@ Header.defaultProps = {
 };
 
 const mapStateToProps = ({ user }) => ({
-    currentUser: user
+    currentUser: user.currentUser
 });
 
-export default Header;
+export default connect(mapStateToProps, null)(Header);
