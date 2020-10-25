@@ -1,131 +1,200 @@
-import React, {Component} from 'react';
-import './styles.scss';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { signUpUserStart } from './../../redux/User/user.actions';
 
-import { auth, handleUserProfile } from './../../firebase/utils';
+// material ui
+import Avatar from '@material-ui/core/Avatar';
+import MuButton from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import MuLink from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 
-import AuthWrapper from './../AuthWrapper';
-import FormInput from './../forms/FormInput';
-import Button from './../forms/Button';
+const mapState = ({ user }) => ({
+  currentUser: user.currentUser,
+  userErr: user.userErr
+});
 
-const initialState = {
-    displayName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    errors: []
-};
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    margin: theme.spacing(10,2,2),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
 
-class Signup extends Component {
+const Signup = props => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const { currentUser, userErr } = useSelector(mapState);
+  const [displayName, setDisplayName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [errors, setErrors] = useState([]);
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            ...initialState
-        };
+  const classes = useStyles();
 
-        this.handleChange = this.handleChange.bind(this);
-
-    }
-    handleChange(e) {
-        const { name, value } = e.target;
-
-        this.setState({
-            [name]: value
-        });
-    }
-
-    handleFormSubmit = async event => {
-        event.preventDefault();
-        const { displayName, email, password, confirmPassword, errors } = this.state;
-
-        if (password !== confirmPassword){
-            const err = ['Password Don\'t match'];
-            this.setState({
-                errors: err
-            });
-            return;
-        }
-
-        // create user with email and pass if not available.
-        try {
-
-            const { user } = await auth.createUserWithEmailAndPassword(email, password);
-
-            await handleUserProfile(user, { displayName });
-
-            // after user signedup, restore to initial state
-            this.setState({
-                ...initialState
-            })
-
-        } catch(err) {
-            console.log(err);
-        }
+  useEffect(() => {
+    if (currentUser) {
+      reset();
+      history.push('/');
     }
 
-    render() {
+  }, [currentUser]);
 
-        const {displayName, email, password, confirmPassword, errors } = this.state;
-
-        const configAuthWrapper = {
-            headline: 'Registration'
-        };
-
-        return (
-            <AuthWrapper {...configAuthWrapper}>
-                <div className="formWrap">
-                    {errors.length > 0 && (
-                        <ul>
-                            {errors.map((err, index) => {
-                                return (
-                                    <li key={index}>
-                                        {err}
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    )}
-                    <form onSubmit={this.handleFormSubmit}>
-                    <FormInput 
-                        type="text"
-                        name="displayName"
-                        value={displayName}
-                        placeholder="Full name"
-                        onChange={this.handleChange}
-                    />
-                    <FormInput 
-                        type="email"
-                        name="email"
-                        value={email}
-                        placeholder="Email"
-                        onChange={this.handleChange}
-                    />
-
-                    <FormInput 
-                        type="password"
-                        name="password"
-                        value={password}
-                        placeholder="Password"
-                        onChange={this.handleChange}
-                    />
-
-                    <FormInput 
-                        type="password"
-                        name="confirmPassword"
-                        value={confirmPassword}
-                        placeholder="Confirm Password"
-                        onChange={this.handleChange}
-                    />
-
-                    <Button typoe="submit">
-                        Register
-                    </Button>
-
-                </form>
-                </div>
-            </AuthWrapper>
-        )
+  useEffect(() => {
+    if (Array.isArray(userErr) && userErr.length > 0) {
+      setErrors(userErr);
     }
+
+  }, [userErr]);
+
+  const reset = () => {
+    setDisplayName('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setErrors([]);
+  };
+
+  const handleFormSubmit = event => {
+    event.preventDefault();
+    dispatch(signUpUserStart({
+      displayName,
+      email,
+      password,
+      confirmPassword
+    }));
+  }
+
+  const configAuthWrapper = {
+    headline: 'Registration'
+  };
+
+  return (
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+              <LockOutlinedIcon />
+            </Avatar>
+            
+            <Typography component="h1" variant="h5">
+              Sign up
+            </Typography>
+
+            <form className={classes.form} onSubmit={handleFormSubmit} noValidate>
+              
+              <Grid container spacing={2}>
+                {/* error message */}
+                {errors.length > 0 && (
+                  <Grid item xs={12}>
+                    {errors.map((err, index) => {
+                      return (
+                        <Typography style={{'color':'red'}} key={index}>
+                          {err}
+                        </Typography>
+                      );
+                    })}
+                  </Grid>
+                )}
+                <Grid item xs={12}>
+                  <TextField
+                    size="medium"
+                    autoComplete="Display Name"
+                    name="displayName"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="displayName"
+                    label="Display Name"
+                    autoFocus
+                    onChange={e=>setDisplayName(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    size="medium"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    onChange={e => setEmail(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                    onChange={e => setPassword(e.target.value)}
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    variant="outlined"
+                    required
+                    fullWidth
+                    name="confirmPassword"
+                    label="Confirm Password"
+                    type="password"
+                    id="confirmPassword"
+                    autoComplete="confirm-password"
+                    onChange={e => setConfirmPassword(e.target.value)}
+                  />
+                </Grid>
+              </Grid>
+
+              <MuButton
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                Sign Up
+              </MuButton>
+
+              <Grid container justify="flex-end">
+                <Grid item>
+                  <MuLink href="/login" variant="body2">
+                    Already have an account? Sign in
+                  </MuLink>
+                </Grid>
+              </Grid>
+            </form>
+          </div>
+          <Box mt={5}>
+          </Box>
+        </Container>
+  );
 }
 
 export default Signup;
